@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.12d59975.css","mappings":"AAAA,EAGE,qBAAsB,CACtB,8BAAkC,CAHlC,QAAS,CACT,SAGF","sources":["index.css"],"sourcesContent":["*{\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: 'Raleway', sans-serif;\n}\n"],"names":[],"sourceRoot":""}
