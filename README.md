@@ -19,7 +19,7 @@
 ### Designs
 
 ![Final Artifact](./designs/Final.png)
-![Active State](./designs/style-guide.png)
+![Active State](./designs/design-guide.png)
 
 ### Links
 
@@ -32,8 +32,8 @@
 
 - Semantic HTML5 markup
 - Custom CSS
-- [React](https://reactjs.org/) - JS library
-- [Styled Components](https://styled-components.com/) - For styles
+- [React](https://reactjs.org/)
+- [Styled Components](https://styled-components.com/)
 
 ### What I learned
 
@@ -41,5 +41,8 @@
 
 ## Author
 
-- Website - [Andrew Schroepfer](https://syntheticdesigner.github.io/)
-- Social - [Linkedin](https://www.linkedin.com/in/andrew-schroepfer/)
+- Andrew Schroepfer - Developer
+  - [Website](https://syntheticdesigner.github.io/)
+  - [Linkedin](https://www.linkedin.com/in/andrew-schroepfer/)
+- Klay Simmons - Designer
+  - [Linkedin](https://www.linkedin.com/in/klay-simmons-b82b08221/)

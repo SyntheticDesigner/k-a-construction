@@ -1,7 +1,13 @@
-import HomPage from "./components/home/HomPage";
+import HomePage from "./components/home/HomePage";
+import { GlobalStyle } from "./StyledComponents";
 
 function App() {
-  return <HomPage/>;
+  return (
+    <>
+      <GlobalStyle />
+      <HomePage />
+    </>
+  );
 }
 
 export default App;
