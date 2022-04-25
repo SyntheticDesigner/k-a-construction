@@ -23,8 +23,8 @@
 
 ### Links
 
-- Solution URL: [https://github.com/SyntheticDesigner/signup-form-main](https://github.com/SyntheticDesigner/k-a-construction)
-- Live Site URL: [https://syntheticdesigner.github.io/signup-form-main/](https://syntheticdesigner.github.io/k-a-construction/)
+- Solution URL: [https://github.com/SyntheticDesigner/k-a-construction](https://github.com/SyntheticDesigner/k-a-construction)
+- Live Site URL: [https://syntheticdesigner.github.io/k-a-construction/](https://syntheticdesigner.github.io/k-a-construction/)
 
 ## My process
 
