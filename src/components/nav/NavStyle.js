@@ -9,9 +9,8 @@ export const NavBarCont = styled.nav`
   align-items: flex-end;
   justify-content: space-between;
   padding: 20px;
-  z-index: 2;
-  /* height: 86px; */
-  /* border-bottom: 1px solid black; */
+  z-index: 4;
+ background-color: var(--light);
 `;
 
 export const NavFolder = styled.div`

@@ -9,7 +9,6 @@ import {
   Line1,
   Line2,
   Line3,
-  TabIndicator,
   LogoIcon,
   EstimateBtn,
 } from "./NavStyle";
