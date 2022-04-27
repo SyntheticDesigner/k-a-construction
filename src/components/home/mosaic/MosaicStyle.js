@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const MosaicSection = styled.section`
     grid-column: 2/3;
-    min-height: calc(100vh - 97px);
+    height: calc(100vh - 97px);
+    max-height: 1140px;
     display: flex;
     flex-direction: column;
     padding-bottom: 54px;

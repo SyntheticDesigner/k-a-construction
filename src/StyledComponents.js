@@ -9,10 +9,10 @@ export const GlobalStyle = createGlobalStyle`
     --gradient: linear-gradient(180deg, rgba(0, 144, 165, 0) 0%, #003F48 100%);
     --header1: 800 95px/101.9% 'Raleway', sans-serif;
     --header2: 800 43px/101.9% 'Raleway', sans-serif;
-    --hero-paragraph: 500 29px 'Raleway', sans-serif;
-    --paragraph: 500 25px 'Raleway', sans-serif;
-    --paragraph-bold: 800 25px 'Raleway', sans-serif;
-    --button: 700 29px 'Raleway', sans-serif;
+    --hero-paragraph: 500 29px/101.9% 'Raleway', sans-serif;
+    --paragraph: 500 25px/101.9% 'Raleway', sans-serif;
+    --paragraph-bold: 800 25px/101.9% 'Raleway', sans-serif;
+    --button: 700 29px/101.9% 'Raleway', sans-serif;
     --nav: 600 22px 'Raleway', serif;
     --footer: 400 22px 'Rasa', serif;
     --info: 400 22px 'Rasa', serif;
@@ -23,6 +23,11 @@ export const GlobalStyle = createGlobalStyle`
 h1{
     letter-spacing: -0.01em;
     font: var(--header1);
+}
+h2{
+    font: var(--header2);
+    width: fit-content;
+    margin: auto;
 }
 `;
 
@@ -52,13 +57,12 @@ export const InfoWrapper = styled.ul`
   list-style-type: none;
   gap: 29px;
   width: fit-content;
-  margin: 0px auto;
   color: ${({ color }) => (color ? color : `var(--dark)`)};
   & > li {
     font: ${({ font }) => (font ? font : `var(--info)`)};
   }
   svg {
-    fill: var(--dark);
+    fill: ${({ color }) => (color ? color : `var(--dark)`)};;
     margin-right: 4px;
   }
 `;

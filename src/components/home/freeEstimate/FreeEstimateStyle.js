@@ -15,8 +15,8 @@ export const FreeEstimateWrapper = styled.div`
   }
   h2{
       grid-column: 2/3;
-      font: var(--header2);
-      margin: -120px auto 140px;
+      margin-top: -128px;
+      margin-bottom: 128px;
   }
 `;
 export const Top = styled.div`
