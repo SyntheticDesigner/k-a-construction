@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const MosaicSection = styled.section`
-    grid-column: 2/3;
-    height: calc(100vh - 97px);
-    max-height: 1140px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 54px;
-    .infoPanel{
-      margin: 0px auto;
-    }
+  grid-column: 2/3;
+  height: calc(100vh - 97px);
+  max-height: 1140px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 54px;
+  .infoPanel {
+    margin: 0px auto;
+  }
 `;
 
 export const MosaicGrid = styled.div`
@@ -36,28 +36,34 @@ export const MosaicGrid = styled.div`
     flex-direction: column;
     justify-content: space-between;
     & > p {
-        font: var(--hero-paragraph);
-        max-width: 95%;
-        color: var(--dark);
+      font: var(--hero-paragraph);
+      max-width: 95%;
+      color: var(--dark);
     }
   }
   & > :nth-child(3) {
     grid-area: panel1;
+    background-image: url(${`${process.env.PUBLIC_URL}/images/mosaic-1.png`});
   }
   & > :nth-child(4) {
     grid-area: panel2;
+    background-image: url(${`${process.env.PUBLIC_URL}/images/mosaic-2.png`});
   }
   & > :nth-child(5) {
     grid-area: panel3;
+    background-image: url(${`${process.env.PUBLIC_URL}/images/mosaic-3.png`});
   }
   & > :nth-child(6) {
     grid-area: panel4;
+    background-image: url(${`${process.env.PUBLIC_URL}/images/mosaic-4.png`});
   }
   & > :nth-child(7) {
     grid-area: panel5;
+    background-image: url(${`${process.env.PUBLIC_URL}/images/mosaic-5.png`});
   }
   & > :nth-child(8) {
     grid-area: panel6;
+    background-image: url(${`${process.env.PUBLIC_URL}/images/mosaic-6.png`});
   }
   & > :nth-child(n + 3) {
     border-radius: 56px;
