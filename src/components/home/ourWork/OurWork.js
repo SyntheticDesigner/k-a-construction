@@ -2,7 +2,7 @@ import React from "react";
 import CareCards from "./CareCards";
 import { OurWorkWrapper } from "./OurWorkStyle";
 import QualityWork from "./QualityWork";
-import Slider from "./Slider";
+import Slider from "../slider/Slider";
 
 export default function OurWork() {
   return (

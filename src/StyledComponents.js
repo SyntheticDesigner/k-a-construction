@@ -9,6 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     --gradient: linear-gradient(180deg, rgba(0, 144, 165, 0) 0%, #003F48 100%);
     --header1: 800 95px/101.9% 'Raleway', sans-serif;
     --header2: 800 43px/101.9% 'Raleway', sans-serif;
+    --sliderLg: 800 50px/101.9% 'Raleway', sans-serif;
+    --sliderSm: 800 156%/101.9% 'Raleway', sans-serif;
     --hero-paragraph: 500 29px/101.9% 'Raleway', sans-serif;
     --paragraph: 500 25px/101.9% 'Raleway', sans-serif;
     --paragraph-bold: 800 25px/101.9% 'Raleway', sans-serif;

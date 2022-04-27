@@ -5,6 +5,7 @@ export const FooterWrapper = styled.div`
   color: var(--light);
   h1{
       margin: auto;
+      padding: 26px;
       width: fit-content;
   }
 `;
@@ -19,6 +20,14 @@ export const FooterGrid = styled.div`
   }
   ul{
       list-style: none;
+      li{
+          margin: 8px;
+          border-bottom: 2px solid rgba(0, 0, 0, 0);
+          cursor: pointer;
+          :hover{
+            border-bottom: 2px solid var(--light);
+          }
+      }
   }
   & > :nth-child(1){
       grid-column: 1/2;

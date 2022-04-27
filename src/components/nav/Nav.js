@@ -31,7 +31,6 @@ export default function Nav() {
   //this use effect will add event hooks to the document when the nav is opened
   //event hooks are removed when the nav is closed
   useEffect(() => {
-    console.log(frames);
     setFrames(document.getElementsByTagName("iframe"));
     var iframeDetector = {
       iframeMouseOver: false,

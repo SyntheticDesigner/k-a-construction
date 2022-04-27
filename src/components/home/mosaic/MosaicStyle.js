@@ -8,7 +8,7 @@ export const MosaicSection = styled.section`
     flex-direction: column;
     padding-bottom: 54px;
     .infoPanel{
-      margin: auto;
+      margin: 0px auto;
     }
 `;
 
