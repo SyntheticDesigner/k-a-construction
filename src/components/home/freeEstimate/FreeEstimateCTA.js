@@ -1,22 +1,49 @@
 import React from "react";
 import { Btn } from "../../../StyledComponents";
-import { Bottom, FreeEstimateWrapper, Top } from "./FreeEstimateStyle";
+import {
+  Bottom,
+  BottomImg,
+  FreeEstimateWrapper,
+  Top,
+} from "./FreeEstimateStyle";
+import { ParallaxBanner } from "react-scroll-parallax";
 
 export default function FreeEstimateCTA() {
   return (
     <FreeEstimateWrapper>
       <Top>
-        <img
+        <ParallaxBanner
+          layers={[
+            {
+              image: `${process.env.PUBLIC_URL}/images/bathroom_slider.png`,
+              translateY: [-20, 0],
+            },
+          ]}
+          style={{ aspectRatio: "1 / 1", height: "496px", width: "496px", marginTop: "57px" }}
+          className='topImg'
+        />
+        {/* <img
           src={process.env.PUBLIC_URL + "/images/bathroom_slider.png"}
           alt='Bathrooms'
-        />
+        /> */}
         <h1>Dinuba Based, Valley Strong.</h1>
       </Top>
       <Bottom>
-        <img
+        <ParallaxBanner
+          layers={[
+            {
+              image: `${process.env.PUBLIC_URL}/images/bedroom.png`,
+              // speed: -10,
+              translateY: [-20, 10],
+            },
+          ]}
+          style={{ aspectRatio: "1 / 1", height: "496px", width: "496px" }}
+          className='botImg'
+        />
+        {/* <img
           src={process.env.PUBLIC_URL + "/images/bedroom.png"}
           alt='Bedrooms'
-        />
+        /> */}
         <article>
           <p>
             With work experience ranging from all over Califronia, KA
