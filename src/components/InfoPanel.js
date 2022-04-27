@@ -6,7 +6,7 @@ import { InfoWrapper } from "../StyledComponents";
 
 export default function InfoPanel({ font, color }) {
   return (
-    <InfoWrapper font={font} color={color}>
+    <InfoWrapper className="infoPanel" font={font} color={color}>
       <li>
         <Pin />
         Dinuba, CA
