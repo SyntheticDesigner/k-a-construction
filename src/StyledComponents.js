@@ -37,6 +37,7 @@ export const HomeWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1240px 1fr;
   padding-top: 97px;
+  overflow-x: hidden;
 `;
 
 export const Btn = styled.button`
