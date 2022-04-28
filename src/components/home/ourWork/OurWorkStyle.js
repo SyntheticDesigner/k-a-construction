@@ -29,8 +29,9 @@ export const QualityWorkWrapper = styled.div`
       position: absolute;
       bottom: 64px;
       left: -64px;
+      z-index: 2;
     }
-    & > img {
+     img {
       width: 90%;
     }
   }

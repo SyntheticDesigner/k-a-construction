@@ -2,6 +2,7 @@ import React from "react";
 import { OurWorkWrapper, QualityWorkWrapper } from "./OurWorkStyle";
 import Article from "./Article";
 import Review from "./Review";
+import { Parallax } from "react-scroll-parallax";
 
 export default function OurWork() {
   return (
@@ -15,10 +16,18 @@ export default function OurWork() {
               space.”
             </p>
           </Review>
-          <img
-            src={process.env.PUBLIC_URL + "/images/feather_interior.png"}
-            alt='Interior Kitchen from Design to Reality'
-          />
+          <Parallax
+            scale={[0.1, 1]}
+            easing='easeInQuad'
+            startScroll={1500}
+            endScroll={2400}
+            
+          >
+            <img
+              src={process.env.PUBLIC_URL + "/images/feather_interior.png"}
+              alt='Interior Kitchen from Design to Reality'
+            />
+          </Parallax>
         </div>
       </QualityWorkWrapper>
       <h2>At KA Contruction, We Care.</h2>
