@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { ParallaxBanner } from "react-scroll-parallax";
 
 export const FreeEstimateWrapper = styled.div`
@@ -21,6 +21,13 @@ export const FreeEstimateWrapper = styled.div`
   }
 `;
 
+const shuffleAnim = keyframes`
+  0%{transform: translateY(0%); z-index: 0;}
+  50%{transform: translateY(-52%); z-index: 0;}
+  60%{transform: translateY(-52%); z-index: 3;}
+  100%{transform: translateY(-0%); z-index: 3;}
+`;
+
 export const Top = styled.div`
   grid-column: 2/3;
   display: flex;
@@ -28,7 +35,7 @@ export const Top = styled.div`
   margin-top: 71px;
   h1 {
     z-index: 3;
-    width: 53%;
+    /* width: 53%; */
   }
   img {
     margin-top: 57px;
@@ -37,6 +44,9 @@ export const Top = styled.div`
     filter: var(--imgShadow);
     &:hover {
       z-index: 3;
+      animation-name: ${shuffleAnim};
+      animation-duration: 1.5s;
+      animation-iteration-count: 1;
     }
   }
 `;

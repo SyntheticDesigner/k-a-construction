@@ -7,6 +7,7 @@ import {
   Top,
 } from "./FreeEstimateStyle";
 import { ParallaxBanner } from "react-scroll-parallax";
+import { Parallax, useParallax } from "react-scroll-parallax";
 
 export default function FreeEstimateCTA() {
   return (
@@ -19,14 +20,21 @@ export default function FreeEstimateCTA() {
               translateY: [-20, 0],
             },
           ]}
-          style={{ aspectRatio: "1 / 1", height: "496px", width: "496px", marginTop: "57px" }}
+          style={{
+            aspectRatio: "1 / 1",
+            height: "496px",
+            width: "496px",
+            marginTop: "57px",
+          }}
           className='topImg'
         />
         {/* <img
           src={process.env.PUBLIC_URL + "/images/bathroom_slider.png"}
           alt='Bathrooms'
         /> */}
-        <h1>Dinuba Based, Valley Strong.</h1>
+        <Parallax style={{width:"53%"}} translateX={['600px', '-500px']}>
+          <h1>Dinuba Based, Valley Strong.</h1>
+        </Parallax>
       </Top>
       <Bottom>
         <ParallaxBanner

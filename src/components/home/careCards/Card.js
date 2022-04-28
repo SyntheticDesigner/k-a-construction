@@ -1,5 +1,5 @@
 import React from "react";
-import { CardWrapper } from "./OurWorkStyle";
+import { CardWrapper } from "./CareCardStyle";
 import { Parallax } from "react-scroll-parallax";
 
 export default function Card({ card }) {

@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import { CardsWrapper } from "./OurWorkStyle";
+import { CardsWrapper } from "./CareCardStyle";
 
 export default function CareCards() {
   const cards = [
