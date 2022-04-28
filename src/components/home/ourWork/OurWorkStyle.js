@@ -11,7 +11,7 @@ export const QualityWorkWrapper = styled.div`
   display: flex;
   gap: 29px;
   & > article {
-    width: 50%;
+    width: 55%;
     h1 {
       margin-bottom: 40px;
     }

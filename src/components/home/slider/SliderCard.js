@@ -13,7 +13,6 @@ const SliderBtn = styled.button`
   padding: 14px;
   padding-bottom: ${({ selected }) => (selected ? "14px" : `60px`)};
   transition: all 0.5s;
-  flex-grow: ${({ _catch }) => (_catch ? "1" : `0`)};
   img {
     height: 100%;
     border-radius: 27px;
@@ -27,7 +26,9 @@ const SliderBtn = styled.button`
     color: var(--dark);
     margin-top: 12px;
     transition: all 0.5s;
-    ${({ selected }) => selected && `
+    ${({ selected }) =>
+      selected &&
+      `
       position: absolute;
       bottom: 36px;
       left: 47px;
@@ -35,7 +36,7 @@ const SliderBtn = styled.button`
       color: var(--light);
     `}
   }
-  .slider-grad{
+  .slider-grad {
     background-image: var(--gradient);
     width: calc(100% - 28px);
     border-radius: 0px 0px 27px 27px;
@@ -46,17 +47,22 @@ const SliderBtn = styled.button`
   }
 `;
 
-export default function SliderCard({ initSelect, setInitSelect, children }) {
-  const [selected, setSelected] = useState(initSelect ? initSelect : false);
-  let _catch = setInitSelect ? true : false;
+export default function SliderCard({
+  current,
+  setCurrent,
+  id,
+  initSelect,
+  children,
+}) {
+  function onHover() {
+    setCurrent(id);
+  }
   return (
     <SliderBtn
-      selected={setInitSelect ? initSelect : selected}
-      _catch={_catch}
-      onMouseEnter={() => (setInitSelect ? setInitSelect(true) : setSelected(true))}
-      onMouseLeave={() => (setInitSelect ? setInitSelect(false) : setSelected(false))}
+      selected={current === id ? true : false || initSelect}
+      onMouseEnter={() => onHover()}
     >
-      <div className="slider-grad" />
+      <div className='slider-grad' />
       {children}
     </SliderBtn>
   );

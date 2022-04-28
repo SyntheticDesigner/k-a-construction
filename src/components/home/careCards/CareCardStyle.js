@@ -16,10 +16,12 @@ export const CardWrapper = styled.div`
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 16px;
   h3 {
     font: var(--button);
     letter-spacing: -0.05em;
+    width: 94%;
+    margin: 0px auto;
   }
   img {
     height: 100px;
@@ -29,7 +31,8 @@ export const CardWrapper = styled.div`
     letter-spacing: -0.05em;
   }
   hr {
-    border: 3px solid #656565;
+    border: none;
+    border-bottom: 6px solid #656565;
     border-radius: 5px;
   }
 `;

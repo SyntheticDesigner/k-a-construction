@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import { ParallaxBanner } from "react-scroll-parallax";
 
 export const FreeEstimateWrapper = styled.div`
@@ -28,6 +28,10 @@ const shuffleAnim = keyframes`
   100%{transform: translateY(-0%); z-index: 3;}
 `;
 
+const slideIn = keyframes`
+  0%{transform: translateX(80%)}
+  100%{transform: translateX(0%)}
+`;
 export const Top = styled.div`
   grid-column: 2/3;
   display: flex;
@@ -35,7 +39,14 @@ export const Top = styled.div`
   margin-top: 71px;
   h1 {
     z-index: 3;
-    /* width: 53%; */
+    width: 53%;
+  }
+  .animate {
+    @media (prefers-reduced-motion: no-preference) {
+      animation-name: ${slideIn};
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+    }
   }
   img {
     margin-top: 57px;

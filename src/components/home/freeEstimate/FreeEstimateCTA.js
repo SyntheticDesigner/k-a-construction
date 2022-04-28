@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import { Btn } from "../../../StyledComponents";
 import {
   Bottom,
@@ -10,6 +10,22 @@ import { ParallaxBanner } from "react-scroll-parallax";
 import { Parallax, useParallax } from "react-scroll-parallax";
 
 export default function FreeEstimateCTA() {
+  const header = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          header.current.classList.add("animate");
+          return;
+        }
+        header.current.classList.remove("animate");
+      });
+    });
+    let _header = header.current;
+    observer.observe(_header);
+  }, [header]);
+
   return (
     <FreeEstimateWrapper>
       <Top>
@@ -32,9 +48,9 @@ export default function FreeEstimateCTA() {
           src={process.env.PUBLIC_URL + "/images/bathroom_slider.png"}
           alt='Bathrooms'
         /> */}
-        <Parallax style={{width:"53%"}} translateX={['600px', '-500px']}>
-          <h1>Dinuba Based, Valley Strong.</h1>
-        </Parallax>
+        {/* <Parallax style={{width:"53%"}} translateX={['100', '-50']}> */}
+        <h1 ref={header}>Dinuba Based, Valley Strong.</h1>
+        {/* </Parallax> */}
       </Top>
       <Bottom>
         <ParallaxBanner
