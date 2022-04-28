@@ -103,6 +103,7 @@ export const Bottom = styled.div`
     width: 38%;
     position: relative;
     font: var(--paragraph);
+    pointer-events: auto;
     p {
       margin: 11px auto;
       span {
