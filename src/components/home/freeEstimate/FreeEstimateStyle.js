@@ -21,11 +21,17 @@ export const FreeEstimateWrapper = styled.div`
   }
 `;
 
-const shuffleAnim = keyframes`
+const shuffleOut = keyframes`
   0%{transform: translateY(0%); z-index: 0;}
   50%{transform: translateY(-52%); z-index: 0;}
   60%{transform: translateY(-52%); z-index: 3;}
   100%{transform: translateY(-0%); z-index: 3;}
+`;
+const shuffleIn = keyframes`
+  0%{transform: translateY(-0%); z-index: 3;}
+  50%{transform: translateY(-52%); z-index: 3;}
+  60%{transform: translateY(-52%); z-index: 0;}
+  100%{transform: translateY(0%); z-index: 0;}
 `;
 
 const slideIn = keyframes`
@@ -53,11 +59,27 @@ export const Top = styled.div`
   }
   .topImg {
     filter: var(--imgShadow);
+    ${({ topHover }) =>
+      topHover === "in"
+        ? css`
+            z-index: 3;
+            animation-name: ${shuffleOut};
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out; 
+          `
+        : topHover === "out"
+        ? css`
+            z-index: 3;
+            animation-name: ${shuffleIn};
+            animation-delay:500ms;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode:forwards;
+            animation-timing-function: ease-in-out; 
+          `
+        : `z-index: 0;`}
     &:hover {
-      z-index: 3;
-      animation-name: ${shuffleAnim};
-      animation-duration: 1.5s;
-      animation-iteration-count: 1;
     }
   }
 `;
@@ -67,12 +89,14 @@ export const Bottom = styled.div`
   justify-content: flex-end;
   gap: 80px;
   transform: translateY(-50%);
+  pointer-events: none;
   & > .bottom-img {
     height: 496px;
     width: 496px;
   }
   .botImg {
     filter: var(--imgShadow);
+    
   }
   article {
     z-index: 3;

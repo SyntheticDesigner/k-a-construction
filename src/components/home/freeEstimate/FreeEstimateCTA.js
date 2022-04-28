@@ -11,6 +11,7 @@ import { Parallax, useParallax } from "react-scroll-parallax";
 
 export default function FreeEstimateCTA() {
   const header = useRef(null);
+  const [topHover, setTopHover] = useState();
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -28,7 +29,7 @@ export default function FreeEstimateCTA() {
 
   return (
     <FreeEstimateWrapper>
-      <Top>
+      <Top topHover={topHover}>
         <ParallaxBanner
           layers={[
             {
@@ -43,6 +44,12 @@ export default function FreeEstimateCTA() {
             marginTop: "57px",
           }}
           className='topImg'
+          onMouseEnter={() => {
+            setTopHover("in");
+          }}
+          onMouseLeave={() => {
+            setTopHover("out");
+          }}
         />
         {/* <img
           src={process.env.PUBLIC_URL + "/images/bathroom_slider.png"}
@@ -61,7 +68,7 @@ export default function FreeEstimateCTA() {
               translateY: [-20, 10],
             },
           ]}
-          style={{ aspectRatio: "1 / 1", height: "496px", width: "496px" }}
+          style={{ aspectRatio: "1 / 1", height: "496px", width: "496px"}}
           className='botImg'
         />
         {/* <img
