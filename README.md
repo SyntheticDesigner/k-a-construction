@@ -23,7 +23,8 @@ Special thanks to [Klay Simmons](https://www.linkedin.com/in/klay-simmons-b82b08
 - Develop a React landing page designed by one of our fellow UX design apprentices.
 
 ### Designs
-####[Figma Project Here](https://www.figma.com/file/kEw4fRuHFyBX5UgM0GCfGZ/KA-Construction?node-id=129%3A189)
+
+[Figma Project Here](https://www.figma.com/file/kEw4fRuHFyBX5UgM0GCfGZ/KA-Construction?node-id=129%3A189)
 ![Final Artifact](./designs/Final.png)
 ![Active State](./designs/design-guide.png)
 
