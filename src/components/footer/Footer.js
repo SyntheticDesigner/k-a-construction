@@ -3,18 +3,26 @@ import InfoPanel from "../InfoPanel";
 import { ReactComponent as Facebook } from "../../assets/icons/facebook_vector.svg";
 import { ReactComponent as Instagram } from "../../assets/icons/instagram_vector.svg";
 import { FooterGrid, FooterWrapper } from "./FooterStyle";
+import { Parallax } from "react-scroll-parallax";
 
 export default function Footer() {
   return (
     <FooterWrapper>
-      <h1>Remodeling, Done Right.</h1>
+      <Parallax
+        scale={[0.1, 1]}
+        easing='easeInQuad'
+        startScroll={3000}
+        endScroll={3400}
+      >
+        <h1>Remodeling, Done Right.</h1>
+      </Parallax>
       <FooterGrid>
         <img
           src={process.env.PUBLIC_URL + "/images/logo.svg"}
           alt='K.A. Construction'
         />
         <InfoPanel color='var(--light)' />
-        <div className="social">
+        <div className='social'>
           <Facebook />
           <Instagram />
         </div>
