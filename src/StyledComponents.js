@@ -19,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     --footer: 400 22px 'Rasa', serif;
     --info: 400 22px 'Rasa', serif;
     --imgShadow: drop-shadow(19px 20px 40px #332E24);
-    --shadow: 13px 17px 36px rgba(0, 0, 0, 0.11);;
+    --shadow: 13px 17px 36px rgba(0, 0, 0, 0.11);
     background-color: var(--light);
 }
 h1{

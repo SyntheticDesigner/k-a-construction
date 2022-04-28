@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { useState } from "react";
 
 const SliderWrapper = styled.div`
-  grid-column: 2/3;
   display: flex;
   gap: 8px;
   margin-top: -100px;

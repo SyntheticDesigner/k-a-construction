@@ -13,19 +13,19 @@ export default function FreeEstimateCTA() {
   const header = useRef(null);
   const [topHover, setTopHover] = useState();
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          header.current.classList.add("animate");
-          return;
-        }
-        header.current.classList.remove("animate");
-      });
-    });
-    let _header = header.current;
-    observer.observe(_header);
-  }, [header]);
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         header.current.classList.add("animate");
+  //         return;
+  //       }
+  //       header.current.classList.remove("animate");
+  //     });
+  //   });
+  //   let _header = header.current;
+  //   observer.observe(_header);
+  // }, [header]);
 
   return (
     <FreeEstimateWrapper>
@@ -55,9 +55,9 @@ export default function FreeEstimateCTA() {
           src={process.env.PUBLIC_URL + "/images/bathroom_slider.png"}
           alt='Bathrooms'
         /> */}
-        {/* <Parallax style={{width:"53%"}} translateX={['100', '-50']}> */}
-        <h1 ref={header}>Dinuba Based, Valley Strong.</h1>
-        {/* </Parallax> */}
+        <Parallax style={{ width: "53%" }} translateX={["200", "0"]} startScroll={200} endScroll={800}>
+          <h1 ref={header}>Dinuba Based, Valley Strong.</h1>
+        </Parallax>
       </Top>
       <Bottom>
         <ParallaxBanner
@@ -68,7 +68,7 @@ export default function FreeEstimateCTA() {
               translateY: [-20, 10],
             },
           ]}
-          style={{ aspectRatio: "1 / 1", height: "496px", width: "496px"}}
+          style={{ aspectRatio: "1 / 1", height: "496px", width: "496px" }}
           className='botImg'
         />
         {/* <img

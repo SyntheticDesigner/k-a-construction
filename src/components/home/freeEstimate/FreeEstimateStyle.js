@@ -45,7 +45,7 @@ export const Top = styled.div`
   margin-top: 71px;
   h1 {
     z-index: 3;
-    width: 53%;
+    /* width: 53%; */
   }
   .animate {
     @media (prefers-reduced-motion: no-preference) {
