@@ -58,6 +58,7 @@ I took the opportunity to learn some new tools. I learned to animate objects bas
 - [Styled Components](https://styled-components.com/)
 - [React Sroll Parallax](https://react-scroll-parallax.damnthat.tv/docs/intro)
 - [Trigger Animations on scroll](https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/)
+- [How to animate a flipping card](https://www.youtube.com/watch?v=y_6fVz9jPWA)
 
 ## Author
 

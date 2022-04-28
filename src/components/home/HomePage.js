@@ -14,7 +14,7 @@ export default function HomPage() {
       <MosaicCTA />
       <FreeEstimateCTA />
 
-      <Parallax style={{ gridColumn: "2/3" }} translateY={["200", "0"]} startScroll={100} endScroll={1500}>
+      <Parallax style={{ gridColumn: "2/3" }} translateY={["100", "0"]} startScroll={1300} endScroll={1600}>
         <Slider />
       </Parallax>
       <OurWork />
