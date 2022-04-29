@@ -38,7 +38,8 @@ export default function MosaicCTA() {
           {panels}
         </MosaicGrid>
       </Parallax>
-      <Parallax translateX={["0", "-200"]} startScroll={200} endScroll={800}>
+  
+      <Parallax translateX={["0", "-200"]} startScroll={200} endScroll={800} style={{marginBottom: "16px"}} >
         <MosaicGrid>
           <h1>Bringing Interiors to life.</h1>
           <div>
@@ -51,7 +52,7 @@ export default function MosaicCTA() {
           {/* {panels} */}
         </MosaicGrid>
       </Parallax>
-      <InfoPanel color='var(--dark)' font='var(--info)' />
+      <InfoPanel color='var(--dark)' font='var(--info)'/>
     </MosaicSection>
   );
 }

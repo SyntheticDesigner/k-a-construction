@@ -6,7 +6,7 @@ export const MosaicSection = styled.section`
   max-height: 1140px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 54px;
+  /* padding-bottom: 54px; */
   padding-top: 60px;
   .infoPanel {
     margin: 60px auto;
