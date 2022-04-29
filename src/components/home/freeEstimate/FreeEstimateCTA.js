@@ -12,6 +12,8 @@ import { Parallax, useParallax } from "react-scroll-parallax";
 export default function FreeEstimateCTA() {
   const header = useRef(null);
   const [topHover, setTopHover] = useState();
+  // const [hovering, setHovering] = useState(false);
+  // const [timeout, setTimeout] = useState();
 
   // useEffect(() => {
   //   const observer = new IntersectionObserver((entries) => {
@@ -27,6 +29,20 @@ export default function FreeEstimateCTA() {
   //   observer.observe(_header);
   // }, [header]);
 
+  
+
+  function mouseIn() {
+    setTopHover("in");
+    // return ()=>clearTimeout(timeout);
+  }
+
+  function mouseOut() {
+    const _timeout = setTimeout(() => {
+      setTopHover("out");
+    }, 2000);
+    
+    return () => clearTimeout(_timeout);
+  }
   return (
     <FreeEstimateWrapper>
       <Top topHover={topHover}>
@@ -45,17 +61,22 @@ export default function FreeEstimateCTA() {
           }}
           className='topImg'
           onMouseEnter={() => {
-            setTopHover("in");
+            mouseIn();
           }}
           onMouseLeave={() => {
-            setTopHover("out");
+            mouseOut();
           }}
         />
         {/* <img
           src={process.env.PUBLIC_URL + "/images/bathroom_slider.png"}
           alt='Bathrooms'
         /> */}
-        <Parallax style={{ width: "53%" }} translateX={["200", "0"]} startScroll={200} endScroll={800}>
+        <Parallax
+          style={{ width: "53%" }}
+          translateX={["200", "0"]}
+          startScroll={200}
+          endScroll={800}
+        >
           <h1 ref={header}>Dinuba Based, Valley Strong.</h1>
         </Parallax>
       </Top>
