@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 #root{
     --dark: #453f31;
     --light: #FBFBFB;
+    --light-opac: rgba(251, 251, 251, 0.8);
     --primary: #0090A5;
     --secondary: #6CC5F0;
     --gradient: linear-gradient(180deg, rgba(0, 144, 165, 0) 0%, #003F48 100%);

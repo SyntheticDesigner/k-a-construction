@@ -10,7 +10,8 @@ export const NavBarCont = styled.nav`
   justify-content: space-between;
   padding: 20px;
   z-index: 4;
- background-color: var(--light);
+  background-color: var(--light-opac);
+  backdrop-filter: blur(23px);
 `;
 
 export const NavFolder = styled.div`
@@ -86,12 +87,13 @@ export const NavLink = styled.button`
   }
 
   ${({ highlight }) =>
-    highlight ?
-    `
+    highlight
+      ? `
       border: none;
       color: var(--light);
       background-color: var(--dark);  
-    ` : `
+    `
+      : `
       &:hover {
         background-color: var(--dark);
         color: var(--light);
@@ -101,7 +103,6 @@ export const NavLink = styled.button`
         }
       }
     `}
-
 `;
 
 export const NavIcon = styled.a`
@@ -220,9 +221,9 @@ export const EstimateBtn = styled.button`
   border-radius: 6px;
   border: 1px solid var(--light);
   & svg {
-      margin-right: 8px;
+    margin-right: 8px;
   }
-  &:hover{
-      background-color: var(--secondary);
+  &:hover {
+    background-color: var(--secondary);
   }
 `;
