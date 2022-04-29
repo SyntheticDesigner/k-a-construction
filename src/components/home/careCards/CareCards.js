@@ -23,6 +23,7 @@ export default function CareCards() {
       offset: 0,
     },
   ];
+  //the offset in each object is used to vary the the speed at which each card flips 
   return (
     <CardsWrapper>
       {cards.map((card, i) => (

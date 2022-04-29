@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as Star } from "../../../assets/icons/star_vector.svg";
+import { ReactComponent as Star } from "../assets/icons/star_vector.svg";
 import styled from "styled-components";
 
 const ReviewWrapper = styled.div`

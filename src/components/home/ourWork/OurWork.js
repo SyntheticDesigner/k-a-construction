@@ -1,7 +1,7 @@
 import React from "react";
 import { OurWorkWrapper, QualityWorkWrapper } from "./OurWorkStyle";
 import Article from "./Article";
-import Review from "./Review";
+import Review from "../../Review";
 import { Parallax } from "react-scroll-parallax";
 
 export default function OurWork() {
@@ -20,8 +20,7 @@ export default function OurWork() {
             scale={[0.1, 1]}
             easing='easeInQuad'
             startScroll={1500}
-            endScroll={2400}
-            
+            endScroll={2400} 
           >
             <img
               src={process.env.PUBLIC_URL + "/images/feather_interior.png"}

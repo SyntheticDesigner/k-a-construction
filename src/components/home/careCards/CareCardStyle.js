@@ -8,6 +8,7 @@ export const CardsWrapper = styled.div`
   perspective: 2000px;
 `;
 
+//The following objects all get transformed so they all need a transform-style: preserve-3d;
 export const FlipMe = styled.div`
   position: relative;
   display: flex;
@@ -15,20 +16,22 @@ export const FlipMe = styled.div`
   align-items: center;
   width: 340px;
   height: 460px;
+  //------------------------------
   transform-style: preserve-3d;
 `;
 
 export const CardWrapper = styled.div`
-  text-align: center;
-  width: 340px;
-  height: 460px;
-  padding: 34px 50px;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
   border-radius: 40px;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 16px;
   background-color: var(--light);
+  text-align: center;
+  //-----------------------------
   transform-style: preserve-3d;
   h3 {
     font: var(--button);
@@ -55,10 +58,13 @@ export const CardBack = styled.div`
   height: 460px;
   background-color: var(--light);
   border-radius: 40px;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
   box-shadow: var(--shadow);
   display: flex;
   justify-content: center;
   align-items: center;
+  //-----------------------------
+  transform-style: preserve-3d;
+  //this being the back of the card and the last element rendered in the html structure
+  //it needs its backface hidden. Try commenting it out to see the difference.
+  backface-visibility: hidden;
 `;

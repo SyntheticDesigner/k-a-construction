@@ -1,20 +1,16 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import { Btn } from "../../../StyledComponents";
-import {
-  Bottom,
-  BottomImg,
-  FreeEstimateWrapper,
-  Top,
-} from "./FreeEstimateStyle";
+import { Bottom, FreeEstimateWrapper, Top } from "./FreeEstimateStyle";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { Parallax, useParallax } from "react-scroll-parallax";
 
 export default function FreeEstimateCTA() {
   const header = useRef(null);
   const [topHover, setTopHover] = useState();
-  // const [hovering, setHovering] = useState(false);
-  // const [timeout, setTimeout] = useState();
 
+  //this is an observer function wrapped in a useEffect, when in use it will detect the
+  //position of the screen relative to the object it is observing and trigger an event'
+  //based on when the observed object enters the view port.
   // useEffect(() => {
   //   const observer = new IntersectionObserver((entries) => {
   //     entries.forEach((entry) => {
@@ -29,18 +25,17 @@ export default function FreeEstimateCTA() {
   //   observer.observe(_header);
   // }, [header]);
 
-  
-
+  //these are small function to give me finer control over the hover effects.
   function mouseIn() {
     setTopHover("in");
-    // return ()=>clearTimeout(timeout);
   }
-
+  //by adding a timeout to the mouse out event I allow the
+  //mouse in animation to complete before the next starts
   function mouseOut() {
     const _timeout = setTimeout(() => {
       setTopHover("out");
     }, 1500);
-    
+
     return () => clearTimeout(_timeout);
   }
   return (
@@ -67,10 +62,6 @@ export default function FreeEstimateCTA() {
             mouseOut();
           }}
         />
-        {/* <img
-          src={process.env.PUBLIC_URL + "/images/bathroom_slider.png"}
-          alt='Bathrooms'
-        /> */}
         <Parallax
           style={{ width: "53%" }}
           translateX={["200", "0"]}
@@ -85,17 +76,12 @@ export default function FreeEstimateCTA() {
           layers={[
             {
               image: `${process.env.PUBLIC_URL}/images/bedroom.png`,
-              // speed: -10,
               translateY: [-20, 10],
             },
           ]}
           style={{ aspectRatio: "1 / 1", height: "496px", width: "496px" }}
           className='botImg'
         />
-        {/* <img
-          src={process.env.PUBLIC_URL + "/images/bedroom.png"}
-          alt='Bedrooms'
-        /> */}
         <article>
           <p>
             With work experience ranging from all over Califronia, KA
@@ -122,3 +108,12 @@ export default function FreeEstimateCTA() {
     </FreeEstimateWrapper>
   );
 }
+
+/* <img
+  src={process.env.PUBLIC_URL + "/images/bedroom.png"}
+  alt='Bedrooms'
+  /> */
+/* <img
+  src={process.env.PUBLIC_URL + "/images/bathroom_slider.png"}
+  alt='Bathrooms'
+  /> */

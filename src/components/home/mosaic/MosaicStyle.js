@@ -7,11 +7,13 @@ export const MosaicSection = styled.section`
   display: flex;
   flex-direction: column;
   padding-bottom: 54px;
+  padding-top: 60px;
   .infoPanel {
-    margin: 0px auto;
+    margin: 60px auto;
   }
 `;
 
+//I used a grid template area in hopes of making a mobile version a little easier
 export const MosaicGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr repeat(4, 190px);

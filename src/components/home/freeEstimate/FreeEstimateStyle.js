@@ -1,5 +1,4 @@
 import styled, { keyframes, css } from "styled-components";
-import { ParallaxBanner } from "react-scroll-parallax";
 
 export const FreeEstimateWrapper = styled.div`
   display: grid;
@@ -21,6 +20,8 @@ export const FreeEstimateWrapper = styled.div`
   }
 `;
 
+//----------------------------------------------------------------------ANIMATIONS
+// Simple animation for animating the photos in this section
 const shuffleOut = keyframes`
   0%{transform: translateY(0%); z-index: 0;}
   50%{transform: translateY(-52%); z-index: 0;}
@@ -34,10 +35,12 @@ const shuffleIn = keyframes`
   100%{transform: translateY(0%); z-index: 0;}
 `;
 
+//The slide in animation i decided not to use in favor of the parallax package
 const slideIn = keyframes`
   0%{transform: translateX(80%)}
   100%{transform: translateX(0%)}
 `;
+//--------------------------------------------------------------------TOP
 export const Top = styled.div`
   grid-column: 2/3;
   display: flex;
@@ -47,6 +50,9 @@ export const Top = styled.div`
     z-index: 3;
     /* width: 53%; */
   }
+  //this class name can be conditionally added 
+  //to trigger the slideIn animation
+  //currently not being used
   .animate {
     @media (prefers-reduced-motion: no-preference) {
       animation-name: ${slideIn};
@@ -59,6 +65,8 @@ export const Top = styled.div`
   }
   .topImg {
     filter: var(--imgShadow);
+    //as the topHovers value changes to 'in' or 'out' 
+    //these animations are conditionally rendered
     ${({ topHover }) =>
       topHover === "in"
         ? css`
@@ -79,10 +87,10 @@ export const Top = styled.div`
             animation-timing-function: ease-in-out; 
           `
         : `z-index: 0;`}
-    &:hover {
-    }
+   
   }
 `;
+//--------------------------------------------------------------------BOTTOM
 export const Bottom = styled.div`
   grid-column: 2/3;
   display: flex;

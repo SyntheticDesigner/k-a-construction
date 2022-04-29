@@ -62,7 +62,7 @@ export default function Nav() {
             });
         }
       };
-      //Dont for get to add an ID to each of your iFrames
+      //Dont forget to add an ID to each of your iFrames
       const addListener = () => {
         for (let i = 0; i < frames.length; ++i) {
           document

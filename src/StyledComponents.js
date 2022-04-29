@@ -21,6 +21,8 @@ export const GlobalStyle = createGlobalStyle`
     --info: 400 22px 'Rasa', serif;
     --imgShadow: drop-shadow(19px 20px 40px #332E24);
     --shadow: 13px 17px 36px rgba(0, 0, 0, 0.11);
+  //by assigning variables for everything i can easily adjust the colors and fonts for different themes or screen sizes
+
     background-color: var(--light);
 }
 h1{
@@ -50,12 +52,14 @@ export const Btn = styled.button`
   background-color: var(--primary);
   width: fit-content;
   transition: all 0.3s;
+  cursor: pointer;
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transform: translateY(-4px);
   }
 `;
 
+//I made the info wrapper more versatile so i can be used in multiple places
 export const InfoWrapper = styled.ul`
   display: flex;
   list-style-type: none;
@@ -64,9 +68,14 @@ export const InfoWrapper = styled.ul`
   color: ${({ color }) => (color ? color : `var(--dark)`)};
   & > li {
     font: ${({ font }) => (font ? font : `var(--info)`)};
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+    :hover {
+      border-bottom: 2px solid ${({ color }) => (color ? color : `var(--dark)`)};
+    }
   }
   svg {
-    fill: ${({ color }) => (color ? color : `var(--dark)`)};;
+    fill: ${({ color }) => (color ? color : `var(--dark)`)};
     margin-right: 4px;
   }
 `;
