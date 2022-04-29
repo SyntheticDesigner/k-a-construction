@@ -39,7 +39,7 @@ export default function FreeEstimateCTA() {
   function mouseOut() {
     const _timeout = setTimeout(() => {
       setTopHover("out");
-    }, 2000);
+    }, 1500);
     
     return () => clearTimeout(_timeout);
   }
