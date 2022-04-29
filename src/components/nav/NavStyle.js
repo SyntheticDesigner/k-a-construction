@@ -220,6 +220,7 @@ export const EstimateBtn = styled.button`
   padding: 10px;
   border-radius: 6px;
   border: 1px solid var(--light);
+  cursor: pointer;
   & svg {
     margin-right: 8px;
   }
